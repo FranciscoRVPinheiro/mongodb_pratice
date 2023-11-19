@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongoModule } from './users/mongodb/mongo.module';
 
 @Module({
+  // Global configuration for MongoDB should be done here.
   imports: [
     ConfigModule.forRoot(),
     process.env.NODE_ENV === 'development'

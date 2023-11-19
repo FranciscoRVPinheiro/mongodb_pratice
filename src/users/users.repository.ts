@@ -3,6 +3,9 @@ import { InjectModel } from '@nestjs/mongoose';
 import { User, UserDocument } from './schemas/user.schema';
 import { FilterQuery, Model } from 'mongoose';
 
+// This is called th Repository Pattern.
+// The database can also be manipulated directly from the service layer,
+// depending on the team.
 @Injectable()
 export class UsersRepository {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
